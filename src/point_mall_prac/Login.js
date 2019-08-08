@@ -44,8 +44,9 @@ class Login extends React.Component{
             history.push('/');
         });
     }
-    
+
     render(){
+        return (
         <div>
             <div id="container">
                 <p>
@@ -59,6 +60,7 @@ class Login extends React.Component{
                 <button onClick={this.login}>로그인</button>
             </div>
         </div>
+        )
     }
 
 }

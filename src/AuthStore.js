@@ -15,6 +15,12 @@ export default class AuthStore{
         localStorage.setItem('auth_token', this.authToken);
     }
 
+    @action deleteToken(){
+        this.rootStore.itemStore.clearCartItems();
+        localStorage.removeItem('auth_token');
+        this.authToken = null;
+    }
+    
     @computed get isLoggedIn(){
         return this.authToken != null;
     }
